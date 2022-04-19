@@ -1,4 +1,12 @@
-
+.downloadLink{
+  color:white;
+  transition: color 0.25s;
+  
+}
+.downloadLink:hover{
+  color:rgb(199, 198, 198);
+  text-decoration: none;
+}
 // .animated{
 //   transition: all 0.25s ease-in;
 // }

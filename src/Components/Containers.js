@@ -1,13 +1,12 @@
-import { useState , useEffect} from "react";
+import { useState, useEffect } from "react";
 import ProjectCard from "../Components/projectCard/ProjectCard";
 import "../Components/container.scss";
 import alertify from "alertifyjs";
 import { sendPsudoMail } from "../firebase/firebase.util";
-import { AnimationOnScroll } from 'react-animation-on-scroll';
+import { AnimationOnScroll } from "react-animation-on-scroll";
 
 // import "animate.css/animate.min.css";
 // import ScrollAnimation from 'react-animate-on-scroll';
-
 
 const Projects = [
   {
@@ -61,83 +60,58 @@ export default function Container() {
     <div class="container">
       <div class="row">
         <div className="downloadContainer">
-          <i class="fa fa-download"></i>&nbsp;Download Resume / CV
+          <a
+            className="downloadLink"
+            href="https://firebasestorage.googleapis.com/v0/b/portfolio-c4ba1.appspot.com/o/CV_april%2019th%2022.pdf?alt=media&token=b08ac224-2cd2-48d7-a53a-2e8c86b71d9b"
+            download
+          >
+            <i class="fa fa-file"></i>&nbsp;View Resume / CV
+          </a>
         </div>
         <div class="col-xs-12">
-        <AnimationOnScroll animateIn="animate__fadeInUp" duration={0.65}>
+          <AnimationOnScroll animateIn="animate__fadeInUp" duration={0.65}>
+            <div class="card">
+              <div class="card-block">
+                <h2>About me</h2>
+                <div class="row">
+                  <div class="col-md-4">
+                    <p>
+                      <img
+                        src="https://avatars.githubusercontent.com/u/67550112?v=4"
+                        class="img-responsive"
+                        alt=""
+                      />
+                    </p>
+                  </div>
+                  <div class="col-md-8 about">
+                    <p>
+                      I am a Full Stack Web Developer with experience in
+                      developing Web Apps using various tech stack such as MERN,
+                      PERN and Cloud Based with the help of Firebase and AWS. I
+                      have been teaching myself how to make websites since I was
+                      14, I started out with HTML, CSS. Later on, I learned how
+                      to code in Javascript - which is what most websites are
+                      built on today. Long story short I devloped a passion to
+                      create applications which solves problems , build systems
+                      and helps create a better future. I enjoy solving problems
+                      and implementing the solution in code.
+                    </p>
 
-        
-          <div class="card" >
-            <div class="card-block" >
-              <h2>About me</h2>
-              <div class="row">
-                <div class="col-md-4">
-                  <p>
-                    <img
-                      src="https://avatars.githubusercontent.com/u/67550112?v=4"
-                      class="img-responsive"
-                      alt=""
-                    />
-                  </p>
-                </div>
-                <div class="col-md-8 about">
-                  <p>
-                    I am a Full Stack Web Developer with experience in
-                    developing Web Apps using various teach stack such as MERN,
-                    PERN and Cloud Based with the help of Firebase and AWS. I
-                    have been teaching myself how to make websites since I was
-                    14, I started out with HTML, CSS. Later on, I learned how to
-                    code in Javascript - which is what most websites are built
-                    on today. Long story short I devloped a passion to create
-                    applications which solves problems and helps build a better
-                    future. I enjoy solving problems and implementing the
-                    solution in code.
-                  </p>
-
-                  <p>
-                    I am looking for an opportunity to work with someone who can
-                    help me grow in my skills and knowledge.
-                  </p>
+                    <p>
+                      I am looking for an opportunity to work with someone who
+                      can help me grow in my skills and knowledge.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          
           </AnimationOnScroll>
 
           <AnimationOnScroll animateIn="animate__fadeInUp" duration={0.65}>
-          <div class="card">
-            <div class="card-block">
-              <h2>Technical Skills</h2>
+            <div class="card">
+              <div class="card-block">
+                <h2>Technical Skills</h2>
 
-              {/* <img
-                    src="./assets/images/img-02.jpg"
-                    class="img-responsive"
-                    alt=""
-                  />
-                  <h3 class="h5">PosterFever.in</h3>
-                  <p>Dec 2021</p> */}
-              <div className="iconContainer">
-                <i className="icon devicon-html5-plain-wordmark colored"></i>
-                <i className="icon devicon-sass-original colored"></i>
-                <i className="icon devicon-javascript-plain colored"></i>
-                <i className="icon devicon-react-plain-wordmark colored"></i>
-                <i className="icon devicon-redux-original colored"></i>
-
-                <i className="icon devicon-firebase-plain-wordmark colored"></i>
-                <i className="icon devicon-nodejs-plain-wordmark colored"></i>
-                <i className="icon devicon-github-original-wordmark colored"></i>
-                <i className="icon devicon-bootstrap-original-wordmark colored"></i>
-              </div>
-            </div>
-          </div>
-          </AnimationOnScroll>
-          <AnimationOnScroll animateIn="animate__fadeInUp" duration={0.65}>
-          <div class="card" data-aos="fade-up">
-            <div class="card-block">
-              <h2>Projects</h2>
-
-              <div class="projectContainer">
                 {/* <img
                     src="./assets/images/img-02.jpg"
                     class="img-responsive"
@@ -145,13 +119,41 @@ export default function Container() {
                   />
                   <h3 class="h5">PosterFever.in</h3>
                   <p>Dec 2021</p> */}
-                {Projects
-                  // .slice(0, numberToShow)
-                  .map((project) => {
-                    return <ProjectCard project={project} />;
-                  })}
+                <div className="iconContainer">
+                  <i className="icon devicon-html5-plain-wordmark colored"></i>
+                  <i className="icon devicon-sass-original colored"></i>
+                  <i className="icon devicon-javascript-plain colored"></i>
+                  <i className="icon devicon-react-plain-wordmark colored"></i>
+                  <i className="icon devicon-redux-original colored"></i>
+
+                  <i className="icon devicon-firebase-plain-wordmark colored"></i>
+                  <i className="icon devicon-nodejs-plain-wordmark colored"></i>
+                  <i className="icon devicon-github-original-wordmark colored"></i>
+                  <i className="icon devicon-bootstrap-original-wordmark colored"></i>
+                </div>
               </div>
-              {/* {showMore ? (
+            </div>
+          </AnimationOnScroll>
+          <AnimationOnScroll animateIn="animate__fadeInUp" duration={0.65}>
+            <div class="card" data-aos="fade-up">
+              <div class="card-block">
+                <h2>Projects</h2>
+
+                <div class="projectContainer">
+                  {/* <img
+                    src="./assets/images/img-02.jpg"
+                    class="img-responsive"
+                    alt=""
+                  />
+                  <h3 class="h5">PosterFever.in</h3>
+                  <p>Dec 2021</p> */}
+                  {Projects
+                    // .slice(0, numberToShow)
+                    .map((project) => {
+                      return <ProjectCard project={project} />;
+                    })}
+                </div>
+                {/* {showMore ? (
                 <div className="showMeBtnContainer">
                   <button
                     className="showMeBtn"
@@ -174,7 +176,7 @@ export default function Container() {
                   </button>
                 </div>
               )} */}
-              {/* <div className="showMeBtnContainer">
+                {/* <div className="showMeBtnContainer">
                 <button
                   className="showMeBtn"
                   onClick={() => {
@@ -184,51 +186,51 @@ export default function Container() {
                   See More
                 </button>
               </div> */}
+              </div>
             </div>
-          </div>
           </AnimationOnScroll>
           <AnimationOnScroll animateIn="animate__fadeInUp" duration={0.65}>
-          <div class="card" data-aos="fade-up">
-            <div class="card-block">
-              <h2>Certificates</h2>
+            <div class="card" data-aos="fade-up">
+              <div class="card-block">
+                <h2>Certificates</h2>
 
-              {/* <img
+                {/* <img
                     src="./assets/images/img-02.jpg"
                     class="img-responsive"
                     alt=""
                   />
                   <h3 class="h5">PosterFever.in</h3>
                   <p>Dec 2021</p> */}
-              <div className="CertContainer">
-                <div className="CertificateCard">
-                  <img
-                    src="https://i.postimg.cc/CLZtQRTh/Java-Algo.png"
-                    className="certImg"
-                    alt="Avatar"
-                  />
-                  <div className="certContent">
-                    <h3>JavaScript Algorithms and Data Structures</h3>
-                    <p>by freeCodeCamp</p>
+                <div className="CertContainer">
+                  <div className="CertificateCard">
+                    <img
+                      src="https://i.postimg.cc/CLZtQRTh/Java-Algo.png"
+                      className="certImg"
+                      alt="Avatar"
+                    />
+                    <div className="certContent">
+                      <h3>JavaScript Algorithms and Data Structures</h3>
+                      <p>by freeCodeCamp</p>
+                    </div>
                   </div>
-                </div>
 
-                <div className="CertificateCard">
-                  <img
-                    src="https://i.postimg.cc/G3zdC85v/Responsive-Web-Design.png"
-                    className="certImg"
-                    alt="Avatar"
-                  />
-                  <div className="certContent">
-                    <h3>Responsive Web Design</h3>
-                    <p>by freeCodeCamp</p>
+                  <div className="CertificateCard">
+                    <img
+                      src="https://i.postimg.cc/G3zdC85v/Responsive-Web-Design.png"
+                      className="certImg"
+                      alt="Avatar"
+                    />
+                    <div className="certContent">
+                      <h3>Responsive Web Design</h3>
+                      <p>by freeCodeCamp</p>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
           </AnimationOnScroll>
           <AnimationOnScroll animateIn="animate__fadeInUp" duration={0.65}>
-          {/* <div class="card" data-aos="fade-up">
+            {/* <div class="card" data-aos="fade-up">
             <div class="card-block">
               <h2>Work</h2>
               <div class="work-experience">
@@ -269,81 +271,81 @@ export default function Container() {
               </div>
             </div>
           </div> */}
-  </AnimationOnScroll>
-          <AnimationOnScroll animateIn="animate__fadeInUp" duration={0.65}>
-          <div class="card" data-aos="fade-up">
-            <div class="card-block">
-              <h2>Education</h2>
-              <div class="row">
-                <div class="col-md-4">
-                  <div class="education-experience">
-                    <small class="date">2015</small>
-                    <h3 class="h5 date-title">
-                      SSC <br />
-                      Maharashtra Board
-                    </h3>
-                    <p>MBBI Educational Academy</p>
-                  </div>
-                  <hr />
-                </div>
-
-                <div class="col-md-4">
-                  <div class="education-experience">
-                    <small class="date">2017</small>
-                    <h3 class="h5 date-title">
-                      HSC - Science (PCM) <br />
-                      with Computer Science
-                    </h3>
-                    <p>Mehernosh Junior College</p>
-                  </div>
-                  <hr />
-                </div>
-                <div class="col-md-4">
-                  <div class="education-experience">
-                    <small class="date">2020</small>
-                    <h3 class="h5 date-title">
-                      Bachelor of Science <br />
-                      in Visual Graphics
-                    </h3>
-                    <p>Amity University</p>
-                  </div>
-                  <hr />
-                </div>
-              </div>
-            </div>
-          </div>
           </AnimationOnScroll>
           <AnimationOnScroll animateIn="animate__fadeInUp" duration={0.65}>
-          <div class="card" data-aos="fade-up">
-            <div class="card-block">
-              <h2>Language</h2>
-              <div class="row">
-                <div class="col-md-4">
-                  <div class="language-experience">
-                    <h3 class="h5">
-                      English :<small>Bilingual</small>
-                    </h3>
+            <div class="card" data-aos="fade-up">
+              <div class="card-block">
+                <h2>Education</h2>
+                <div class="row">
+                  <div class="col-md-4">
+                    <div class="education-experience">
+                      <small class="date">2015</small>
+                      <h3 class="h5 date-title">
+                        SSC <br />
+                        Maharashtra Board
+                      </h3>
+                      <p>MBBI Educational Academy</p>
+                    </div>
+                    <hr />
                   </div>
-                </div>
-                <div class="col-md-4">
-                  <div class="language-experience">
-                    <h3 class="h5">
-                      Hindi :<small>Fluent</small>
-                    </h3>
+
+                  <div class="col-md-4">
+                    <div class="education-experience">
+                      <small class="date">2017</small>
+                      <h3 class="h5 date-title">
+                        HSC - Science (PCM) <br />
+                        with Computer Science
+                      </h3>
+                      <p>Mehernosh Junior College</p>
+                    </div>
+                    <hr />
                   </div>
-                </div>
-                <div class="col-md-4">
-                  <div class="language-experience">
-                    <h3 class="h5">
-                      Spanish :<small>Beginner</small>
-                    </h3>
+                  <div class="col-md-4">
+                    <div class="education-experience">
+                      <small class="date">2020</small>
+                      <h3 class="h5 date-title">
+                        Bachelor of Science <br />
+                        in Visual Graphics
+                      </h3>
+                      <p>Amity University</p>
+                    </div>
+                    <hr />
                   </div>
                 </div>
               </div>
             </div>
-          </div>
+          </AnimationOnScroll>
+          <AnimationOnScroll animateIn="animate__fadeInUp" duration={0.65}>
+            <div class="card" data-aos="fade-up">
+              <div class="card-block">
+                <h2>Language</h2>
+                <div class="row">
+                  <div class="col-md-4">
+                    <div class="language-experience">
+                      <h3 class="h5">
+                        English :<small>Bilingual</small>
+                      </h3>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="language-experience">
+                      <h3 class="h5">
+                        Hindi :<small>Fluent</small>
+                      </h3>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="language-experience">
+                      <h3 class="h5">
+                        Spanish :<small>Beginner</small>
+                      </h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
 
-          {/* <div class="card" data-aos="fade-up">
+            {/* <div class="card" data-aos="fade-up">
             <div class="card-block">
               <h2>Projects</h2>
               <div
@@ -408,119 +410,127 @@ export default function Container() {
           </div> */}
           </AnimationOnScroll>
           <AnimationOnScroll animateIn="animate__fadeInUp" duration={0.65}>
-          <div class="card" data-aos="fade-up">
-            <div class="card-block">
-              <h2>Networks</h2>
-              <div class="row">
-                <div class="col-md-3">
-                  <p class="social-buttons">
-                    <a
-                      href="https://www.linkedin.com/in/sachinsingh99"
-                      title=""
-                      target="#"
-                    >
-                      <span class="social-round-icon fa-icon">
-                        <i class="fa fa-linkedin"></i>
-                      </span>
-                      /sachinsingh99
-                    </a>
-                  </p>
-                </div>
+            <div class="card" data-aos="fade-up">
+              <div class="card-block">
+                <h2>Networks</h2>
+                <div class="row">
+                  <div class="col-md-3">
+                    <p class="social-buttons">
+                      <a
+                        href="https://www.linkedin.com/in/sachinsingh99"
+                        title=""
+                        target="#"
+                      >
+                        <span class="social-round-icon fa-icon">
+                          <i class="fa fa-linkedin"></i>
+                        </span>
+                        /sachinsingh99
+                      </a>
+                    </p>
+                  </div>
 
-                <div class="col-md-3">
-                  <p class="social-buttons">
-                    <a
-                      href="https://github.com/iamsachin619"
-                      title=""
-                      target="#"
-                    >
-                      <span class="social-round-icon fa-icon">
-                        <i class="fa fa-github"></i>
-                      </span>
-                      /iamsachin619
-                    </a>
-                  </p>
-                </div>
-                <div class="col-md-3">
-                  <p class="social-buttons">
-                    <a
-                      href="https://twitter.com/iamsachin619"
-                      title=""
-                      target="#"
-                    >
-                      <span class="social-round-icon fa-icon">
-                        <i class="fa fa-twitter"></i>
-                      </span>
-                      /iamsachin619
-                    </a>
-                  </p>
+                  <div class="col-md-3">
+                    <p class="social-buttons">
+                      <a
+                        href="https://github.com/iamsachin619"
+                        title=""
+                        target="#"
+                      >
+                        <span class="social-round-icon fa-icon">
+                          <i class="fa fa-github"></i>
+                        </span>
+                        /iamsachin619
+                      </a>
+                    </p>
+                  </div>
+                  <div class="col-md-3">
+                    <p class="social-buttons">
+                      <a
+                        href="https://twitter.com/iamsachin619"
+                        title=""
+                        target="#"
+                      >
+                        <span class="social-round-icon fa-icon">
+                          <i class="fa fa-twitter"></i>
+                        </span>
+                        /iamsachin619
+                      </a>
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
           </AnimationOnScroll>
           <AnimationOnScroll animateIn="animate__fadeInUp" duration={0.65}>
-          <div class="card" data-aos="fade-up">
-            <div class="card-block">
-              <h2>Contact</h2>
-              <form action="" class="reveal-content">
-                <div class="form-group">
-                  <input
-                    type="email"
-                    class="form-control"
-                    id="email"
-                    placeholder="Your Email"
-                  />
-                </div>
-                <div class="form-group">
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="subject"
-                    placeholder="Subject"
-                  />
-                </div>
-                <div class="form-group">
-                  <textarea
-                    class="form-control"
-                    rows="5"
-                    id="messageContext"
-                    placeholder="Enter your message"
-                  ></textarea>
-                </div>
-                <div class="form-group">
-                  <button
-                    type="submit"
-                    class="btn btn-primary"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      const email = document.getElementById("email").value;
-                      const sub = document.getElementById("subject").value;
-                      const message = document.getElementById("messageContext")
-                        .value;
-                      if (email && sub && message) {
-                        //send email
-                        sendPsudoMail({ email, sub, message });
-                        alertify.success("Message sent!");
-                        //clear form
-                        document.getElementById("email").value = "";
-                        document.getElementById("subject").value = "";
-                        document.getElementById("messageContext").value = "";
-                      } else {
-                        alertify.error("All fields are required!");
-                      }
-                    }}
-                  >
-                    Send message
-                  </button>
-                </div>
-              </form>
+            <div class="card" data-aos="fade-up">
+              <div class="card-block">
+                <h2>Contact</h2>
+                <form action="" class="reveal-content">
+                  <div class="form-group">
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="email"
+                      placeholder="Your Email"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="subject"
+                      placeholder="Subject"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <textarea
+                      class="form-control"
+                      rows="5"
+                      id="messageContext"
+                      placeholder="Enter your message"
+                    ></textarea>
+                  </div>
+                  <div class="form-group">
+                    <button
+                      type="submit"
+                      class="btn btn-primary"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        const email = document.getElementById("email").value;
+                        const sub = document.getElementById("subject").value;
+                        const message = document.getElementById(
+                          "messageContext"
+                        ).value;
+                        if (email && sub && message) {
+                          //send email
+                          sendPsudoMail({ email, sub, message });
+                          alertify.success("Message sent!");
+                          //clear form
+                          document.getElementById("email").value = "";
+                          document.getElementById("subject").value = "";
+                          document.getElementById("messageContext").value = "";
+                        } else {
+                          alertify.error("All fields are required!");
+                        }
+                      }}
+                    >
+                      Send message
+                    </button>
+                  </div>
+                </form>
+              </div>
             </div>
-          </div>
           </AnimationOnScroll>
-          
+
           <div className="downloadContainer bottomOne">
-            <i class="fa fa-download"></i>&nbsp;Download Resume / CV
+            <a
+              className="downloadLink"
+              href="https://firebasestorage.googleapis.com/v0/b/portfolio-c4ba1.appspot.com/o/CV_april%2019th%2022.pdf?alt=media&token=b08ac224-2cd2-48d7-a53a-2e8c86b71d9b"
+              download
+              target="_blank"
+            >
+              <i class="fa fa-file"></i>&nbsp;View Resume / CV
+            </a>
           </div>
         </div>
       </div>
