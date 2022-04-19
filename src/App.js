@@ -1,13 +1,15 @@
 import "./styles.css";
 import Container from "./Components/Containers";
 import React from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
+// import AOS from "aos";
+// import "aos/dist/aos.css";
 
 export default class App extends React.Component {
-  componentDidMount() {
-    AOS.init();
-  }
+  // componentDidMount() {
+
+  //   AOS.init();
+    
+  // }
   render() {
     return (
       <div className="App">

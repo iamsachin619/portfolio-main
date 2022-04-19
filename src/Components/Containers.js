@@ -1,9 +1,13 @@
-import { useState } from "react";
+import { useState , useEffect} from "react";
 import ProjectCard from "../Components/projectCard/ProjectCard";
 import "../Components/container.scss";
 import alertify from "alertifyjs";
 import { sendPsudoMail } from "../firebase/firebase.util";
-import AOS from "aos";
+import { AnimationOnScroll } from 'react-animation-on-scroll';
+
+// import "animate.css/animate.min.css";
+// import ScrollAnimation from 'react-animate-on-scroll';
+
 
 const Projects = [
   {
@@ -50,6 +54,9 @@ export default function Container() {
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
+  // useEffect(()=>{
+  //   window.addEventListener('load', AOS.refresh)
+  // })
   return (
     <div class="container">
       <div class="row">
@@ -57,8 +64,11 @@ export default function Container() {
           <i class="fa fa-download"></i>&nbsp;Download Resume / CV
         </div>
         <div class="col-xs-12">
-          <div class="card" data-aos="fade-up">
-            <div class="card-block">
+        <AnimationOnScroll animateIn="animate__fadeInUp" duration={0.65}>
+
+        
+          <div class="card" >
+            <div class="card-block" >
               <h2>About me</h2>
               <div class="row">
                 <div class="col-md-4">
@@ -92,7 +102,11 @@ export default function Container() {
               </div>
             </div>
           </div>
-          <div class="card" data-aos="fade-up">
+          
+          </AnimationOnScroll>
+
+          <AnimationOnScroll animateIn="animate__fadeInUp" duration={0.65}>
+          <div class="card">
             <div class="card-block">
               <h2>Technical Skills</h2>
 
@@ -117,7 +131,8 @@ export default function Container() {
               </div>
             </div>
           </div>
-
+          </AnimationOnScroll>
+          <AnimationOnScroll animateIn="animate__fadeInUp" duration={0.65}>
           <div class="card" data-aos="fade-up">
             <div class="card-block">
               <h2>Projects</h2>
@@ -171,7 +186,8 @@ export default function Container() {
               </div> */}
             </div>
           </div>
-
+          </AnimationOnScroll>
+          <AnimationOnScroll animateIn="animate__fadeInUp" duration={0.65}>
           <div class="card" data-aos="fade-up">
             <div class="card-block">
               <h2>Certificates</h2>
@@ -210,6 +226,8 @@ export default function Container() {
               </div>
             </div>
           </div>
+          </AnimationOnScroll>
+          <AnimationOnScroll animateIn="animate__fadeInUp" duration={0.65}>
           {/* <div class="card" data-aos="fade-up">
             <div class="card-block">
               <h2>Work</h2>
@@ -251,7 +269,8 @@ export default function Container() {
               </div>
             </div>
           </div> */}
-
+  </AnimationOnScroll>
+          <AnimationOnScroll animateIn="animate__fadeInUp" duration={0.65}>
           <div class="card" data-aos="fade-up">
             <div class="card-block">
               <h2>Education</h2>
@@ -293,7 +312,8 @@ export default function Container() {
               </div>
             </div>
           </div>
-
+          </AnimationOnScroll>
+          <AnimationOnScroll animateIn="animate__fadeInUp" duration={0.65}>
           <div class="card" data-aos="fade-up">
             <div class="card-block">
               <h2>Language</h2>
@@ -386,7 +406,8 @@ export default function Container() {
               </div>
             </div>
           </div> */}
-
+          </AnimationOnScroll>
+          <AnimationOnScroll animateIn="animate__fadeInUp" duration={0.65}>
           <div class="card" data-aos="fade-up">
             <div class="card-block">
               <h2>Networks</h2>
@@ -437,7 +458,8 @@ export default function Container() {
               </div>
             </div>
           </div>
-
+          </AnimationOnScroll>
+          <AnimationOnScroll animateIn="animate__fadeInUp" duration={0.65}>
           <div class="card" data-aos="fade-up">
             <div class="card-block">
               <h2>Contact</h2>
@@ -495,6 +517,8 @@ export default function Container() {
               </form>
             </div>
           </div>
+          </AnimationOnScroll>
+          
           <div className="downloadContainer bottomOne">
             <i class="fa fa-download"></i>&nbsp;Download Resume / CV
           </div>
