@@ -25,9 +25,10 @@ class ProjectCard extends React.Component {
               );
             })}
           </div>
-
-          <h4>{this.props.project.heading}</h4>
-          <p>{this.props.project.shortDiscription}</p>
+          <div className="Content">
+            <h4>{this.props.project.heading}</h4>
+            <p>{this.props.project.shortDiscription}</p>
+          </div>
           <a
             className="repoLink"
             href={this.props.project.repo}

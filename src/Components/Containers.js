@@ -50,7 +50,7 @@ const Projects = [
     heading: "To-do List",
 
     tech: ["ReactJS"],
-    shortDiscription: "App to manage a To-do List",
+    shortDiscription: "App to manage a To-do List.",
     image:
       "https://firebasestorage.googleapis.com/v0/b/portfolio-c4ba1.appspot.com/o/projectImages%2Fto-do%20list.png?alt=media&token=36af4337-98c8-4d65-a289-0c5120f505d1",
     repo: "https://github.com/iamsachin619/to-do-list-react"
