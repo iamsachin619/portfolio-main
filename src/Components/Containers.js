@@ -71,6 +71,7 @@ export default function Container() {
         <div className="downloadContainer">
           <a
             className="downloadLink"
+            target="_blank"
             href="https://firebasestorage.googleapis.com/v0/b/portfolio-c4ba1.appspot.com/o/CV_april%2019th%2022.pdf?alt=media&token=b08ac224-2cd2-48d7-a53a-2e8c86b71d9b"
             download
           >
