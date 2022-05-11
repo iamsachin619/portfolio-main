@@ -133,8 +133,15 @@ export default function Container() {
                   <i className="icon devicon-html5-plain-wordmark colored"></i>
                   <i className="icon devicon-sass-original colored"></i>
                   <i className="icon devicon-javascript-plain colored"></i>
+
+                  <i className="icon devicon-typescript-plain colored"></i>
+
                   <i className="icon devicon-react-plain-wordmark colored"></i>
                   <i className="icon devicon-redux-original colored"></i>
+
+                  <i class="icon devicon-express-original-wordmark colored"></i>
+
+                  <i class="icon devicon-mongodb-plain-wordmark colored"></i>
 
                   <i className="icon devicon-firebase-plain-wordmark colored"></i>
                   <i className="icon devicon-nodejs-plain-wordmark colored"></i>
@@ -214,7 +221,7 @@ export default function Container() {
                 <div className="CertContainer">
                   <div className="CertificateCard">
                     <img
-                      src="https://i.postimg.cc/CLZtQRTh/Java-Algo.png"
+                      src="https://firebasestorage.googleapis.com/v0/b/portfolio-c4ba1.appspot.com/o/certificates%2FJava-Algo.png?alt=media&token=2d5dc806-a828-45a7-86ad-fa57d1995677"
                       className="certImg"
                       alt="Avatar"
                     />
@@ -226,13 +233,25 @@ export default function Container() {
 
                   <div className="CertificateCard">
                     <img
-                      src="https://i.postimg.cc/G3zdC85v/Responsive-Web-Design.png"
+                      src="https://firebasestorage.googleapis.com/v0/b/portfolio-c4ba1.appspot.com/o/certificates%2FResponsive-Web-Design.png?alt=media&token=2ac02c96-08d6-43ad-9850-fd9cf58dc153"
                       className="certImg"
                       alt="Avatar"
                     />
                     <div className="certContent">
                       <h3>Responsive Web Design</h3>
                       <p>by freeCodeCamp</p>
+                    </div>
+                  </div>
+
+                  <div className="CertificateCard">
+                    <img
+                      src="https://firebasestorage.googleapis.com/v0/b/portfolio-c4ba1.appspot.com/o/certificates%2FTypeScript.png?alt=media&token=95fca34f-e1fa-4863-8b19-2ebccca3b41d"
+                      className="certImg"
+                      alt="Avatar"
+                    />
+                    <div className="certContent">
+                      <h3>TypeScript Course</h3>
+                      <p>by Codecademy</p>
                     </div>
                   </div>
                 </div>
