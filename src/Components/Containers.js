@@ -72,7 +72,7 @@ export default function Container() {
           <a
             className="downloadLink"
             target="_blank"
-            href="https://firebasestorage.googleapis.com/v0/b/portfolio-c4ba1.appspot.com/o/CV_april%2019th%2022.pdf?alt=media&token=b08ac224-2cd2-48d7-a53a-2e8c86b71d9b"
+            href="https://firebasestorage.googleapis.com/v0/b/portfolio-c4ba1.appspot.com/o/Resume%20(MERN%20Stack%20Developer)%208th%20Aug22.pdf?alt=media&token=b29fabba-5f5b-4f0f-a4c3-6f95f04d41f5"
             download
           >
             <i class="fa fa-file"></i>&nbsp;View Resume / CV
@@ -132,6 +132,10 @@ export default function Container() {
                 <div className="iconContainer">
                   <i className="icon devicon-html5-plain-wordmark colored"></i>
                   <i className="icon devicon-sass-original colored"></i>
+                  
+            
+          
+
                   <i className="icon devicon-javascript-plain colored"></i>
 
                   <i className="icon devicon-typescript-plain colored"></i>
@@ -142,10 +146,15 @@ export default function Container() {
                   <i class="icon devicon-express-original-wordmark colored"></i>
 
                   <i class="icon devicon-mongodb-plain-wordmark colored"></i>
+                  <i class="icon devicon-mysql-plain-wordmark colored"></i>
 
                   <i className="icon devicon-firebase-plain-wordmark colored"></i>
+                  <i class="icon devicon-amazonwebservices-plain-wordmark colored"></i>
                   <i className="icon devicon-nodejs-plain-wordmark colored"></i>
+                  <i class="icon devicon-git-plain-wordmark colored"></i>
                   <i className="icon devicon-github-original-wordmark colored"></i>
+                  <i class="icon devicon-linux-plain colored"></i>
+                  <i class="icon devicon-mocha-plain colored"></i>
                   <i className="icon devicon-bootstrap-original-wordmark colored"></i>
                 </div>
               </div>
@@ -554,7 +563,7 @@ export default function Container() {
           <div className="downloadContainer bottomOne">
             <a
               className="downloadLink"
-              href="https://firebasestorage.googleapis.com/v0/b/portfolio-c4ba1.appspot.com/o/CV_april%2019th%2022.pdf?alt=media&token=b08ac224-2cd2-48d7-a53a-2e8c86b71d9b"
+              href="https://firebasestorage.googleapis.com/v0/b/portfolio-c4ba1.appspot.com/o/Resume%20(MERN%20Stack%20Developer)%208th%20Aug22.pdf?alt=media&token=b29fabba-5f5b-4f0f-a4c3-6f95f04d41f5"
               download
               target="_blank"
             >
