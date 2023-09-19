@@ -56,6 +56,8 @@ const Projects = [
     repo: "https://github.com/iamsachin619/to-do-list-react"
   }
 ];
+const resumeLink =
+  "https://firebasestorage.googleapis.com/v0/b/portfolio-c4ba1.appspot.com/o/MERN%20Resume%202023.pdf?alt=media&token=ff5a6d9a-6930-47dd-aa8c-3d852f8d3326";
 export default function Container() {
   const [showMore, setShowMore] = useState(false);
   // const numberToShow = 4;
@@ -72,7 +74,7 @@ export default function Container() {
           <a
             className="downloadLink"
             target="_blank"
-            href="https://firebasestorage.googleapis.com/v0/b/portfolio-c4ba1.appspot.com/o/Resume%20(MERN%20Stack%20Developer)%208th%20Aug22.pdf?alt=media&token=b29fabba-5f5b-4f0f-a4c3-6f95f04d41f5"
+            href={resumeLink}
             download
           >
             <i class="fa fa-file"></i>&nbsp;View Resume / CV
@@ -132,9 +134,6 @@ export default function Container() {
                 <div className="iconContainer">
                   <i className="icon devicon-html5-plain-wordmark colored"></i>
                   <i className="icon devicon-sass-original colored"></i>
-                  
-            
-          
 
                   <i className="icon devicon-javascript-plain colored"></i>
 
@@ -563,7 +562,7 @@ export default function Container() {
           <div className="downloadContainer bottomOne">
             <a
               className="downloadLink"
-              href="https://firebasestorage.googleapis.com/v0/b/portfolio-c4ba1.appspot.com/o/Resume%20(MERN%20Stack%20Developer)%208th%20Aug22.pdf?alt=media&token=b29fabba-5f5b-4f0f-a4c3-6f95f04d41f5"
+              href={resumeLink}
               download
               target="_blank"
             >
